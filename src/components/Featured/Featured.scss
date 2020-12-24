@@ -46,7 +46,7 @@
       justify-content: space-between;
       font-size: 28px;
       color: #666;
-      View:nth-of-type(1) {
+      .left {
         display: flex;
         align-items: center;
         .avatar {
@@ -57,14 +57,14 @@
           margin-right: 10px;
         }
       }
-      View:nth-of-type(2) {
+      .right {
         display: flex;
         align-items: center;
         .comment-icon,
         .comment-like {
           @extend .small-icon;
         }
-        View:nth-of-type(1) {
+        .left-1 {
           margin-right: 40px;
         }
       }

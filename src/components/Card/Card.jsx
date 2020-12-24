@@ -28,32 +28,32 @@ export default class Card extends React.Component {
       >
         <View className="top">
           <View className="left">
-            <View>{name.replace(/市$/g, "")}</View>
-            <View>{slogan}</View>
+            <View className="title">{name.replace(/市$/g, "")}</View>
+            <View className="subtitle">{slogan}</View>
           </View>
           <View>
             <View className="right">
-              <Text>{hotAmt} 助力</Text>
+              <Text className="hot">{hotAmt} 助力</Text>
               <Image className="fire"></Image>
             </View>
           </View>
         </View>
         <View className="bottom">
-          <View>
-            <View>特产</View>
-            <View>{localProductAmt}</View>
+          <View className="item">
+            <View className="name">特产</View>
+            <View className="amt">{localProductAmt}</View>
           </View>
-          <View>
-            <View>景点</View>
-            <View>{scenicAmt}</View>
+          <View className="item">
+            <View className="name">景点</View>
+            <View className="amt">{scenicAmt}</View>
           </View>
-          <View>
-            <View>文化</View>
-            <View>{cultureAmt}</View>
+          <View className="item">
+            <View className="name">文化</View>
+            <View className="amt">{cultureAmt}</View>
           </View>
-          <View>
-            <View>品牌</View>
-            <View>{brandAmt}</View>
+          <View className="item">
+            <View className="name">品牌</View>
+            <View className="amt">{brandAmt}</View>
           </View>
         </View>
       </View>

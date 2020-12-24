@@ -30,12 +30,12 @@ export default class Featured extends React.Component {
               ></Image>
               <View className="title">{article.title}</View>
               <View className="bottom-container">
-                <View>
+                <View className="left">
                   <Image className="avatar" src={article.authorAvatar}></Image>
                   <Text>{article.authorName}</Text>
                 </View>
-                <View>
-                  <View>
+                <View className="right">
+                  <View className="left-1">
                     <Image className="comment-icon"></Image>
                     <Text>{article.reviewAmt}</Text>
                   </View>

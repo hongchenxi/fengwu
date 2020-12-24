@@ -491,27 +491,29 @@ export default class FengWu extends React.Component {
           })}
         </View>
         <View className="content">
-          <Swiper current={current} onChange={e => this.change(e)}>
-            {categorys.map(category => {
-              return (
-                <SwiperItem key={category.id}>
-                  <View className="container">
-                    {category.list.map(item => {
-                      return (
-                        <View className="item" key={item.id}>
-                          <Image className="banner" src={item.banner}></Image>
-                          <View className="name single-text">{item.name}</View>
-                          <View className="like-container">
-                            <Image style={{ width: 10, height: 10 }}></Image>
-                            <Text className="like">{item.likeAmt}</Text>
-                          </View>
+          <Swiper
+            className="banner-swiper"
+            current={current}
+            onChange={e => this.change(e)}
+          >
+            {categorys.map(category => (
+              <SwiperItem key={category.id} className="banner-swiper">
+                <View className="container">
+                  {category.list.map(item => {
+                    return (
+                      <View className="item" key={item.id}>
+                        <Image className="banner" src={item.banner}></Image>
+                        <View className="name single-text">{item.name}</View>
+                        <View className="like-container">
+                          <Image style={{ width: 10, height: 10 }}></Image>
+                          <Text className="like">{item.likeAmt}</Text>
                         </View>
-                      );
-                    })}
-                  </View>
-                </SwiperItem>
-              );
-            })}
+                      </View>
+                    );
+                  })}
+                </View>
+              </SwiperItem>
+            ))}
           </Swiper>
           <View className="show-more">查看全部</View>
         </View>
