@@ -1,0 +1,93 @@
+.head-container {
+  width: 100%;
+  position: relative;
+  .city-img {
+    width: 100%;
+    height: 430px;
+    vertical-align: top;
+  }
+  .head-content {
+    border-radius: 60px 60px 0 0;
+    background-color: #fff;
+    padding: 80px 30px 30px 30px;
+    position: relative;
+    top: -60px;
+    z-index: 1;
+    .bottom {
+      margin-top: 0;
+    }
+  }
+  .title {
+    font-size: 36px;
+    color: #000;
+  }
+  .subtitle {
+    font-size: 30px;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.8;
+    position: relative;
+    padding-right: 4em;
+    
+  }
+
+  .mulit-ellipsis {
+    text-indent: -4em;
+    // &::before {
+    //   content: '青岛别称';
+    //   color: green;
+    //   position: relative;
+    //   right: 10px;
+    //   top: 0;
+    // }
+    // &::after {
+    //   content: '查看全部';
+    //   color: green;
+    //   position: absolute;
+    //   left: -10px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    // }
+  }
+  .group-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    .avatar-container {
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: pink;
+        margin-right: 10px;
+        position: relative;
+        display: inline-block;
+        &:last-child::after {
+          content: '289+';
+          border-radius: 20px;
+          background-color: red;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          left: 30px;
+          padding: 4px 14px;
+          font-size: 20px;
+        }
+      }
+    }
+    .city-group--btn {
+      width: 180px;
+      height: 60px;
+      background-color: pink;
+      color: #fff;
+      line-height: 60px;
+      border-radius: 60px;
+      text-align: center;
+    }
+  }
+}
+

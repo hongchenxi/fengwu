@@ -1,0 +1,80 @@
+.cell-container {
+  width: 100%;
+  background-color: #eee;
+  .cell {
+    padding: 40px 20px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 20px;
+    .tag-container {
+      font-size: 32px;
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 40px 40px 40px 0;
+      background-color: #fff;
+      box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 20px;
+      color: #333;
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: pink;
+        vertical-align: top;
+        margin-right: 20px;
+      }
+      .left-title::after {
+        content: '・';
+      }
+      
+    }
+    .banner {
+      width:100%;
+      height: 360px;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+    }
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+    .bottom-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 28px;
+      color: #666;
+      View:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+        .avatar {
+          width: 40px;
+          height: 40px;
+          background-color: pink;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+      View:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        .comment-icon,
+        .comment-like {
+          @extend .small-icon;
+        }
+        View:nth-of-type(1) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+.small-icon {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  margin-right: 10px;
+}
