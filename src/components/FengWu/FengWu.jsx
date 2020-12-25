@@ -505,7 +505,7 @@ export default class FengWu extends React.Component {
                         <Image className="banner" src={item.banner}></Image>
                         <View className="name single-text">{item.name}</View>
                         <View className="like-container">
-                          <Image style={{ width: 10, height: 10 }}></Image>
+                          <Image className="like-icon"></Image>
                           <Text className="like">{item.likeAmt}</Text>
                         </View>
                       </View>
