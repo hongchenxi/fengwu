@@ -1,5 +1,6 @@
 .more-text--container {
   margin-top: 10px;
+  position: relative;
   .first-line--text {
     color: #000;
     font-size: 28px;
@@ -8,6 +9,10 @@
     background-color: #fff;
     max-height: 44px;
     line-height: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   .description {
     color: #000;
@@ -19,9 +24,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     position: relative;
-    z-index: -1;
-    top: -34px;
     word-break: break-all;
+    line-height: 44px;
     .more-btn {
       position: absolute;
       color: #5c709d;

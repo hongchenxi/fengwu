@@ -1,0 +1,41 @@
+.rich-text--container {
+  height: 100vh;
+  background-color: #f7f7f7;
+  padding: 28px;
+  .rich-text {
+    font-size: 32px;
+    color: #333;
+    line-height: 1.5;
+  }
+  .the-end--text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #999;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    &::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background-color: #999;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -40px;
+    }
+    &::after {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background-color: #999;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -40px;
+    }
+  }
+}

@@ -10,6 +10,42 @@ import Share from "../../components/Share/Share";
 
 export default class CityDetail extends Component {
   state = {
+    headInfo: {
+      activityList: [],
+      bannerList: [],
+      baseProvinceName: "山东省",
+      code: 370200,
+      description:
+        '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" /><meta content="width=device-width, target-densitydpi=320, user-scalable=no" name="viewport" /><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><link  href="https://image.huaxiafengwu.com/tinymce-style.css?v=1598504770702" rel="stylesheet" type="text/css" /><script src="https://image.huaxiafengwu.com/js/lazysizes.min.js?v=5.2.1" async=""></script></head><body class="content"><p><strong>青岛</strong>别称岛城、琴岛，是山东省副省级市、计划单列市，国务院批复确定的中国沿海重要中心城市和滨海度假旅游城市、国际性港口城市。截至2018年，全市下辖7个区、代管3个县级市，总面积11293平方千米，2019年全市常住总人口949.98万人。其中，市区常住人口645.20万人。</p> \n<p>青岛地处中国华东地区、山东半岛东南、东濒黄海，位于中日韩自贸区的前沿地带，是山东省经济中心、国家重要的现代海洋产业发展先行区、东北亚国际航运枢纽、海上体育运动基地 ， 一带一路新亚欧大陆桥经济走廊主要节点城市和海上合作战略支点。</p> \n<p>青岛昔称胶澳，是国家历史文化名城、中国道教发祥地 。因树木繁多，四季常青而得名。1891年清政府驻兵建制， 青岛是2008北京奥运会和第13届残奥会帆船比赛举办城市，是中国帆船之都， 亚洲最佳航海城，世界啤酒之城、联合国“电影之都”、全国首批沿海开放城市、全国文明城市、中国最具幸福感城市。被誉为“东方瑞士” 、中国品牌之都。</p></body></html>',
+      favoriteAmt: 253,
+      firstBanner: "https://image.huaxiafengwu.com/city/2/1588150660825.webp",
+      firstBannerVideo: "",
+      hotAmt: 9819,
+      isFavorite: false,
+      isLiked: false,
+      likeAmt: 540,
+      mayorAvatar: "",
+      mayorName: "",
+      mayorQuote: "",
+      mayorTitle: "",
+      mayorUserId: 0,
+      name: "青岛市",
+      parentCityCode: 0,
+      parentCityName: "",
+      publishStatus: 10,
+      slogan: "红瓦绿树，碧海蓝天",
+      snsGroupCode:
+        "https://image.huaxiafengwu.com/city/370200/sns/1595842500740.jpeg",
+      snsGroupDescription:
+        "长按保存图片，微信打开识别二维码入群\n风里雨里，我们在群里等你哦～",
+      unLightedCooperationLink: "",
+      unLightedDescSubject: "助力点亮城市  让更多人看到她的精彩",
+      unLightedDescText:
+        "热爱这座城市，就给世界一个了解她的机会。你的助力与分享，将点亮城市，解锁精彩的城市内容和丰富全面的百科，让更多人了解她的美好风物，发现她的独特魅力。",
+      voteId: 0,
+      voteName: "",
+      voteRank: ""
+    },
     articles: [
       {
         authorAvatar:
@@ -174,10 +210,10 @@ export default class CityDetail extends Component {
 
   componentDidHide() {}
   render() {
-    const { articles, shareInfo } = this.state;
+    const { headInfo, articles, shareInfo } = this.state;
     return (
       <View>
-        <CityHeader />
+        <CityHeader headInfo={headInfo} />
         <View className="section-title">城市风物</View>
         <FengWu />
         <View className="section-title">城市精选</View>

@@ -12,6 +12,13 @@ export default class ShowMoreText extends React.Component {
   state = {
     firstLineHeight: 17
   };
+  navigateTo = () => {
+    const { description } = this.props;
+    Taro.navigateTo({
+      url: `/pages/city_intro/index?richText=${encodeURIComponent(description)}`
+    });
+  };
+
   componentDidMount() {
     Taro.nextTick(() => {
       Taro.createSelectorQuery()
@@ -25,15 +32,22 @@ export default class ShowMoreText extends React.Component {
     });
   }
   render() {
-    const { description, more } = this.props;
+    let { description, more } = this.props;
+    if (description) {
+      description = description
+        .match(/<p>(.*?)<\/p>/g)[0]
+        .replace(/<[^<>]+>/g, "");
+    }
     return (
       <View className="more-text--container">
-        <View id="first-line" className="first-line--text">
-          {description}
-        </View>
         <View className="description">
           {description}
-          <View className="more-btn">{more}</View>
+          <View className="more-btn" onClick={this.navigateTo}>
+            {more}
+          </View>
+        </View>
+        <View id="first-line" className="first-line--text">
+          {description}
         </View>
       </View>
     );
